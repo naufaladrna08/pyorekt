@@ -10,7 +10,7 @@ find_package(PostgreSQL REQUIRED)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(LIBGIT2 REQUIRED libgit2)
 
-add_executable(pyorekt-c main.cpp)
+add_executable(pyorekt-c main.cpp server.cpp)
 
 if(PostgreSQL_FOUND)
 	message(STATUS "Found PostgreSQL: ${PostgreSQL_VERSION_STRING}")
